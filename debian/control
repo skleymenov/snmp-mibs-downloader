@@ -5,8 +5,8 @@ Maintainer: Jochen Friedrich <jochen@scram.de>
 Standards-Version: 3.8.3
 Build-Depends: debhelper (>=7)
 Homepage: https://alioth.debian.org/projects/pkg-net-snmp
-Vcs-Git: git://git.debian.org/git/collab-maint/mib-downloader.git
-Vcs-Browser: http://git.debian.org/?p=collab-maint/mib-downloader.git
+Vcs-Git: git://git.debian.org/git/collab-maint/snmp-mibs-downloader.git
+Vcs-Browser: http://git.debian.org/?p=collab-maint/snmp-mibs-downloader.git
 
 Package: snmp-mibs-downloader
 Section: contrib/net
@@ -15,8 +15,8 @@ Depends: ${misc:Depends}, wget, libsmi2ldbl (>=0.4.8+dfsg2-1)
 Suggests: unzip
 Description: Downloads RFCs and IANA Docs containing MIBs and extracts them
  This package contains a script which downloads RFCs containing SNMP MIB
- files and extracts them into /usr/share/snmp/ietf. It also downloads the
- most current MIBs from IANA and extracts them into /usr/share/snmp/iana.
+ files and extracts them into /usr/share/mibs/ietf. It also downloads the
+ most current MIBs from IANA and extracts them into /usr/share/mibs/iana.
  .
  Strictly, the MIBs are not necessary for SNMP operations, but they contain
  names and descriptions for the SNMP OID tree.
