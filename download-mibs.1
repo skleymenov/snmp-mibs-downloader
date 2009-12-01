@@ -1,0 +1,28 @@
+.\" /***********************************************************
+.\"     Copyright 2009 Jochen Friedrich <jochen@scram.de>
+.\"
+.\"                       All Rights Reserved
+.\"
+.\" Permission to use, copy, modify, and distribute this software and its
+.\" documentation for any purpose and without fee is hereby granted,
+.\" provided that the above copyright notice appear in all copies and that
+.\" both that copyright notice and this permission notice appear in
+.\" supporting documentation.
+.\" ******************************************************************/
+.TH DOWNLOAD-MIBS 1 "download-mibs 1.0"
+.SH NAME
+download-mibs \- download and extract SNMP MIBs
+.SH SYNOPSIS
+.B download-mibs
+[config]
+.SH DESCRIPTION
+.I download-mibs
+Downloads SNMP MIBs from IETF, IANA and other sites in the Internet. Strips
+the MIBs from the documents or archives and sort them into the libsmi
+directory structure.
+.SH OPTIONS
+.TP 8
+.B \fI[config]\fB
+Use particular configuration(s) rather than the included default.
+.SH AUTHOR
+Jochen Friedrich <jochen@scram.de>
