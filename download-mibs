@@ -3,7 +3,7 @@
 set -e
 set -o pipefail
 
-SMISTRIP=smistrip2
+SMISTRIP=/usr/bin/smistrip
 CONFDIR=/etc/snmp-mibs-downloader
 
 echo ""
