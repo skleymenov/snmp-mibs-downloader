@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+
+if [ ! -d /usr/share/mibs/iana -o ! -d /usr/share/mibs/ietf ];
+then
+	if ! /usr/bin/download-mibs;
+	then
+		echo "Downloading the MIBs failed."
+		echo ""
+		echo "Please check your Internet connection and run download-mibs again."
+		echo ""
+		exit 1
+	fi
+fi
+
+#DEBHELPER#
