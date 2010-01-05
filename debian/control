@@ -11,7 +11,7 @@ Vcs-Browser: http://git.debian.org/?p=collab-maint/snmp-mibs-downloader.git
 Package: snmp-mibs-downloader
 Section: contrib/net
 Architecture: all
-Depends: ${misc:Depends}, wget, libsmi2ldbl (>=0.4.8+dfsg2-1)
+Depends: ${misc:Depends}, wget, smistrip
 Suggests: unzip
 Description: Downloads RFCs and IANA Docs containing MIBs and extracts them
  This package contains a script which downloads RFCs containing SNMP MIB
