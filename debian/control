@@ -1,5 +1,5 @@
 Source: snmp-mibs-downloader
-Section: contrib/net
+Section: non-free/net
 Priority: optional
 Maintainer: Jochen Friedrich <jochen@scram.de>
 Standards-Version: 3.8.3
@@ -9,7 +9,7 @@ Vcs-Git: git://git.debian.org/git/collab-maint/snmp-mibs-downloader.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/snmp-mibs-downloader.git
 
 Package: snmp-mibs-downloader
-Section: contrib/net
+Section: non-free/net
 Architecture: all
 Depends: ${misc:Depends}, wget, smistrip
 Suggests: unzip

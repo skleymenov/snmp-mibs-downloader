@@ -2,3 +2,13 @@
 
 %:
 	dh $@
+
+.phony: update_rfcs
+
+update_rfcs:
+	rm -f mibrfcs/*
+	cat rfclist ianarfclist | while read rfc mib; do \
+	if [ "$$rfc" != "#" ]; then \
+	wget -O mibrfcs/rfc$$rfc.txt http://www.rfc-editor.org/rfc/rfc$$rfc.txt; \
+	fi; \
+	done;
