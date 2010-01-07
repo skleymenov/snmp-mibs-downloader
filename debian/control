@@ -11,7 +11,7 @@ Vcs-Browser: http://git.debian.org/?p=collab-maint/snmp-mibs-downloader.git
 Package: snmp-mibs-downloader
 Section: non-free/net
 Architecture: all
-Depends: ${misc:Depends}, wget, smistrip
+Depends: ${misc:Depends}, wget, smistrip, patch
 Suggests: unzip
 Description: Install and manage Management Information Base (MIB) files
  This package ships the IETF RFCs containing MIB files and a script which
