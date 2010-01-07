@@ -13,10 +13,11 @@ Section: non-free/net
 Architecture: all
 Depends: ${misc:Depends}, wget, smistrip
 Suggests: unzip
-Description: Downloads RFCs and IANA Docs containing MIBs and extracts them
- This package contains a script which downloads RFCs containing SNMP MIB
- files and extracts them into /usr/share/mibs/ietf. It also downloads the
- most current MIBs from IANA and extracts them into /usr/share/mibs/iana.
+Description: Install and manage Management Information Base (MIB) files
+ This package ships the IETF RFCs containing MIB files and a script which
+ extracts them to be used by Simple Network Management libraries. The script
+ can be used to update some MIBs to the latest version or to download extra
+ vendor MIBs.
  .
- Strictly, the MIBs are not necessary for SNMP operations, but they contain
- names and descriptions for the SNMP OID tree.
+ These MIBs can be useful for programs like wireshark or snmpget to enable
+ them to translating the received information into human readable text.
