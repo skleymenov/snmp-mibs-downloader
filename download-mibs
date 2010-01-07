@@ -22,18 +22,36 @@ download_mibs()
     if [ ! -z "$ARCHIVE" ]
     then
 	ARCHTMP=`mktemp -d`
-	wget -O $ARCHTMP/$ARCHIVE -q -nv $HOST/$DIR/$ARCHIVE
-	if [ "$ARCHTYPE" == "tar" ]
+	if [ "$ARCHTYPE" == "dirgz" ]
 	then
-	    tar -C $ARCHTMP -xf $ARCHTMP/$ARCHIVE
-	fi
-	if [ "$ARCHTYPE" == "tgz" ]
-	then
-	    tar -C $ARCHTMP -xzf $ARCHTMP/$ARCHIVE
-	fi
-	if [ "$ARCHTYPE" == "zip" ]
-	then
-	    unzip -d $ARCHTMP $ARCHTMP/$ARCHIVE
+	    if [ ! -z "$HOST" ]
+	    then
+		echo "Downloading a whole directory with compressed content"
+		echo "is not supported."
+		exit 1
+	    else
+		cp $DIR/$ARCHIVE/* $ARCHTMP/
+		gzip -d $ARCHTMP/*
+	    fi
+	else
+	    if [ ! -z "$HOST" ]
+	    then
+		wget -O $ARCHTMP/$ARCHIVE -q -nv $HOST/$DIR/$ARCHIVE
+	    else
+		cp $DIR/$ARCHIVE $ARCHTMP/$ARCHIVE
+	    fi
+	    if [ "$ARCHTYPE" == "tar" ]
+	    then
+		tar -C $ARCHTMP -xf $ARCHTMP/$ARCHIVE
+	    fi
+	    if [ "$ARCHTYPE" == "tgz" ]
+	    then
+		tar -C $ARCHTMP -xzf $ARCHTMP/$ARCHIVE
+	    fi
+	    if [ "$ARCHTYPE" == "zip" ]
+	    then
+		unzip -d $ARCHTMP $ARCHTMP/$ARCHIVE
+	    fi
 	fi
     fi
     cat $CONFDIR/$CONF | while read file mibs;

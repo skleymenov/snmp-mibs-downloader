@@ -1,3 +1,5 @@
 usr/bin
 etc/snmp-mibs-downloader
 usr/share/mibs
+usr/share/doc/mibrfcs
+var/lib/mibs
