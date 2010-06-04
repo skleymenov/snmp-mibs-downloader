@@ -31,7 +31,7 @@ download_mibs()
 		exit 1
 	    else
 		cp $DIR/$ARCHIVE/* $ARCHTMP/
-		gzip -d $ARCHTMP/*
+		gzip -d $ARCHTMP/* || /bin/true
 	    fi
 	else
 	    if [ ! -z "$HOST" ]
