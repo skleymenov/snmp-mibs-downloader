@@ -1,3 +1,13 @@
+snmp-mibs-downloader (1.1) unstable; urgency=low
+
+  * Ship IANA resources directly rather than extracting them from the
+    RFC. Not all resources are shipped as RFC and sometimes even the
+    RFC listed in the history is plain wrong. (Closes: #574608)
+  * Update policy to 3.8.4.
+  * Add recently submitted RFCs to repository.
+
+ -- Jochen Friedrich <jochen@scram.de>  Fri, 04 Jun 2010 14:34:12 +0200
+
 snmp-mibs-downloader (1.0) unstable; urgency=low
 
   * Initial release. (Closes: #559039)
