@@ -515,7 +515,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-Spatial-One-way-Delay-Vector"
        REFERENCE
           "Reference "RFC5644, section 5.1."
-       := { ianaIppmMetrics 52 }
+       ::= { ianaIppmMetrics 52 }
 
    ietfSpatialPacketLossVector OBJECT-IDENTITY
        STATUS current
@@ -523,7 +523,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-Spatial-Packet-Loss-Vector"
        REFERENCE
           "Reference "RFC5644, section 5.2."
-       := { ianaIppmMetrics 53 } 
+       ::= { ianaIppmMetrics 53 } 
 
    ietfSpatialOneWayIpdvVector OBJECT-IDENTITY
        STATUS current
@@ -531,7 +531,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-Spatial-One-way-ipdv-Vector"
        REFERENCE
           "Reference "RFC5644, section 5.3."
-       := { ianaIppmMetrics 54 }
+       ::= { ianaIppmMetrics 54 }
       
    ietfSegmentOneWayDelayStream OBJECT-IDENTITY
        STATUS current
@@ -539,7 +539,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-Segment-One-way-Delay-Stream"
        REFERENCE
           "Reference "RFC5644, section 6.1."
-       := { ianaIppmMetrics 55 } 
+       ::= { ianaIppmMetrics 55 } 
 
    ietfSegmentPacketLossStream OBJECT-IDENTITY
        STATUS current
@@ -547,7 +547,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-Segment-Packet-Loss-Stream"
        REFERENCE
           "Reference "RFC5644, section 6.2."
-       := { ianaIppmMetrics 56 }
+       ::= { ianaIppmMetrics 56 }
 
    ietfSegmentIpdvPrevStream OBJECT-IDENTITY
        STATUS current
@@ -555,7 +555,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-Segment-ipdv-prev-Stream"
        REFERENCE
           "Reference "RFC5644, section 6.3."
-       := { ianaIppmMetrics 57 } 
+       ::= { ianaIppmMetrics 57 } 
 
    ietfSegmentIpdvMinStream OBJECT-IDENTITY
        STATUS current
@@ -563,7 +563,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-Segment-ipdv-min-Stream"
        REFERENCE
           "Reference "RFC5644, section 6.4."
-       := { ianaIppmMetrics 58 }
+       ::= { ianaIppmMetrics 58 }
 
    -- One-to-group metrics
 
@@ -573,7 +573,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Delay-Vector"
        REFERENCE
           "Reference "RFC5644, section 7.1."
-       := { ianaIppmMetrics 59 }
+       ::= { ianaIppmMetrics 59 }
    
    ietfOneToGroupPacketLossVector OBJECT-IDENTITY
        STATUS current
@@ -581,7 +581,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Packet-Loss-Vector"
        REFERENCE
           "Reference "RFC5644, section 7.2."
-       := { ianaIppmMetrics 60 } 
+       ::= { ianaIppmMetrics 60 } 
    
    ietfOneToGroupIpdvVector OBJECT-IDENTITY
        STATUS current
@@ -589,7 +589,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-ipdv-Vector"
        REFERENCE
           "Reference "RFC5644, section 7.3."
-       := { ianaIppmMetrics 61 } 
+       ::= { ianaIppmMetrics 61 } 
 
    -- One to group statistics
 
@@ -601,7 +601,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Receiver-n-Mean-Delay"
        REFERENCE
           "Reference "RFC5644, section 8.3.1."
-       := { ianaIppmMetrics 62 } 
+       ::= { ianaIppmMetrics 62 } 
 
    ietfOneToGroupMeanDelay OBJECT-IDENTITY
        STATUS current
@@ -609,7 +609,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Mean-Delay"
        REFERENCE
        "Reference "RFC5644, section 8.3.2."
-       := { ianaIppmMetrics 63 } 
+       ::= { ianaIppmMetrics 63 } 
 
    ietfOneToGroupRangeMeanDelay OBJECT-IDENTITY
        STATUS current
@@ -617,7 +617,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Range-Mean-Delay"
        REFERENCE
           "Reference "RFC5644, section 8.3.3."
-       := { ianaIppmMetrics 64 } 
+       ::= { ianaIppmMetrics 64 } 
    
    ietfOneToGroupMaxMeanDelay OBJECT-IDENTITY
        STATUS current
@@ -625,7 +625,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Max-Mean-Delay"
        REFERENCE
           "Reference "RFC5644, section 8.3.4."
-       := { ianaIppmMetrics 65 } 
+       ::= { ianaIppmMetrics 65 } 
 
    ietfOneToGroupReceiverNLossRatio OBJECT-IDENTITY
        STATUS current
@@ -633,7 +633,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Receiver-n-Loss-Ratio"
        REFERENCE
           "Reference "RFC5644, section 8.4.1."
-       := { ianaIppmMetrics 66 }
+       ::= { ianaIppmMetrics 66 }
    --
 
    ietfOneToGroupReceiverNCompLossRatio OBJECT-IDENTITY
@@ -642,7 +642,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Receiver-n-Comp-Loss-Ratio"
        REFERENCE
           "Reference "RFC5644, section 8.4.2."
-       := { ianaIppmMetrics 67 } 
+       ::= { ianaIppmMetrics 67 } 
    
    ietfOneToGroupLossRatio OBJECT-IDENTITY
        STATUS current
@@ -650,7 +650,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Loss-Ratio"
        REFERENCE
           "Reference "RFC5644, section 8.4.3."
-       := { ianaIppmMetrics 68 } 
+       ::= { ianaIppmMetrics 68 } 
    --
 
    ietfOneToGroupRangeLossRatio OBJECT-IDENTITY
@@ -659,7 +659,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Range-Loss-Ratio"
        REFERENCE
           "Reference "RFC5644, section 8.4.4."
-       := { ianaIppmMetrics 69 } 
+       ::= { ianaIppmMetrics 69 } 
 
    ietfOneToGroupRangeDelayVariation OBJECT-IDENTITY
        STATUS current
@@ -667,7 +667,7 @@ IANA-IPPM-METRICS-REGISTRY-MIB DEFINITIONS ::= BEGIN
           "Type-P-One-to-group-Range-Delay-Variation"
        REFERENCE
           "Reference "RFC5644, section 8.5.1."
-       := { ianaIppmMetrics 70 } 
+       ::= { ianaIppmMetrics 70 } 
 
    --
 
