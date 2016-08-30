@@ -17,6 +17,8 @@ snmp-mibs-downloader (1.1+nmu1) UNRELEASED; urgency=medium
   * Update IANA MIBs. (Closes: #689483)
   * Apply RFC2417 errata correction to fix IPATM-IPMC-MIB compilation errors.
     (Closes: #584657, #689485)
+  * Move MIBs sources from /usr/share/doc/ to /usr/share/snmp/mibs-downloader/.
+    (Closes: #780429)
 
  -- Guillem Jover <gjover@sipwise.com>  Thu, 14 Jul 2016 16:48:24 +0200
 
