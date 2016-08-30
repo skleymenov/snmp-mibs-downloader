@@ -6,14 +6,6 @@ set -o pipefail
 SMISTRIP=/usr/bin/smistrip
 CONFDIR=/etc/snmp-mibs-downloader
 
-echo ""
-echo "Downloading documents and extracting MIB files."
-echo "This will take some minutes."
-echo ""
-echo "In case this process fails, it can always be repeated later by executing"
-echo "$0 again."
-echo ""
-
 . $CONFDIR/snmp-mibs-downloader.conf
 
 download_mibs()
@@ -91,6 +83,44 @@ download_mibs()
     fi
 }
 
+list_mibs()
+{
+  cat $CONFDIR/$CONF | while read file mibs; do
+    if [ "$file" = "#" ]; then
+      continue
+    fi
+
+    echo $mibs | tr ':' '\n'
+  done
+}
+
+MODE=get
+
+while [ $# -gt 0 ]; do
+    case $1 in
+    --get)
+      MODE=get
+      ;;
+    --list)
+      MODE=list
+      ;;
+    *)
+      break
+    esac
+
+    shift
+done
+
+if [ $MODE = get ]; then
+  echo ""
+  echo "Downloading documents and extracting MIB files."
+  echo "This will take some minutes."
+  echo ""
+  echo "In case this process fails, it can always be repeated later by executing"
+  echo "$0 again."
+  echo ""
+fi
+
 sources=$1
 if [ -z "$sources" ]
 then
@@ -112,5 +142,9 @@ do
     ARCHTYPE=
     ARCHDIR=
     . $CONFDIR/$i.conf
-    download_mibs
+    if [ $MODE = list ]; then
+      list_mibs
+    else
+      download_mibs
+    fi
 done
