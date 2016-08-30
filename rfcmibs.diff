@@ -496,3 +496,14 @@ diff -ru /usr/local/share/snmp/rfc.orig/SMUX-MIB /usr/local/share/snmp/rfc/SMUX-
          ACCESS  read-only
          STATUS  mandatory
          DESCRIPTION
+--- /usr/local/share/snmp/rfc.orig/IPATM-IPMC-MIB	2016-08-31 18:15:12.119765771 +0200
++++ /usr/local/share/snmp/rfc/IPATM-IPMC-MIB	2016-08-31 18:15:37.055739853 +0200
+@@ -3,7 +3,7 @@
+ IMPORTS
+     MODULE-COMPLIANCE, NOTIFICATION-GROUP, OBJECT-GROUP
+         FROM SNMPv2-CONF
+-    snmpModules, MODULE-IDENTITY, NOTIFICATION-TYPE, Counter32,
++    mib-2, MODULE-IDENTITY, NOTIFICATION-TYPE, Counter32,
+         Integer32, Unsigned32, OBJECT-TYPE, IpAddress
+         FROM SNMPv2-SMI
+     AtmAddr
