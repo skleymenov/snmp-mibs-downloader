@@ -20,6 +20,7 @@ snmp-mibs-downloader (1.1+nmu1) UNRELEASED; urgency=medium
   * Move MIBs sources from /usr/share/doc/ to /usr/share/snmp/mibs-downloader/.
     (Closes: #780429)
   * Add a --list command to download-mibs.
+  * Remove generated MIBs on package removal. (Closes: #665353)
 
  -- Guillem Jover <gjover@sipwise.com>  Thu, 14 Jul 2016 16:48:24 +0200
 
