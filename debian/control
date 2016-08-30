@@ -3,7 +3,7 @@ Section: non-free/net
 Priority: optional
 Maintainer: Jochen Friedrich <jochen@scram.de>
 Standards-Version: 3.8.4
-Build-Depends: debhelper (>=7)
+Build-Depends: debhelper (>= 9)
 Homepage: https://alioth.debian.org/projects/pkg-net-snmp
 Vcs-Git: git://git.debian.org/git/collab-maint/snmp-mibs-downloader.git
 Vcs-Browser: http://git.debian.org/?p=collab-maint/snmp-mibs-downloader.git
