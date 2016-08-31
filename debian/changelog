@@ -11,6 +11,9 @@ snmp-mibs-downloader (1.1+nmu1) UNRELEASED; urgency=medium
   * Automate maintainer update machinery for IANA and IETF MIB sources.
   * Compress all data sources instead of relying on dh_compress which
     on some conditions does not compress small files. (Closes: #595219)
+  * Move IPFIX-SELECTOR-MIB from IANA to IANARFC lists. This MIB is provided
+    by the RFC5815 but controlled by IANA, and is not available from the IANA
+    web site (any more?).
 
  -- Guillem Jover <gjover@sipwise.com>  Thu, 14 Jul 2016 16:48:24 +0200
 
