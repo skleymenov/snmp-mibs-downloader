@@ -4,6 +4,8 @@ snmp-mibs-downloader (1.1+nmu1) UNRELEASED; urgency=medium
   * Switch to debhelper compatibility level 9.
   * Use canonical https URLs in Vcs-Git and Vcs-Browser fields.
   * Remove executable bits from debian/control file.
+  * Remove Section field from binary package stanza with same value as
+    the one inherited from the source stanza.
 
  -- Guillem Jover <gjover@sipwise.com>  Thu, 14 Jul 2016 16:48:24 +0200
 
