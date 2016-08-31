@@ -7,6 +7,7 @@ snmp-mibs-downloader (1.1+nmu1) UNRELEASED; urgency=medium
   * Remove Section field from binary package stanza with same value as
     the one inherited from the source stanza.
   * Update Standards-Version to 3.9.8.
+  * Use .PHONY instead of .phony in debian/rules.
 
  -- Guillem Jover <gjover@sipwise.com>  Thu, 14 Jul 2016 16:48:24 +0200
 

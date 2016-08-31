@@ -3,7 +3,7 @@
 %:
 	dh $@
 
-.phony: update_rfcs
+.PHONY: update_rfcs
 
 update_rfcs:
 	rm -f mibrfcs/*
