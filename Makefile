@@ -19,5 +19,5 @@ install:
 	cp mibiana/*                   $(DESTDIR)/usr/share/snmp/mibs-downloader/mibiana
 	gzip -n9                       $(DESTDIR)/usr/share/snmp/mibs-downloader/mibrfcs/*
 	gzip -n9                       $(DESTDIR)/usr/share/snmp/mibs-downloader/mibiana/*
-	ln -s /var/lib/mibs/ietf     $(DESTDIR)/usr/share/mibs/ietf
-	ln -s /var/lib/mibs/iana     $(DESTDIR)/usr/share/mibs/iana
+	ln -s /var/lib/snmp/mibs/ietf  $(DESTDIR)/usr/share/snmp/mibs/ietf
+	ln -s /var/lib/snmp/mibs/iana  $(DESTDIR)/usr/share/snmp/mibs/iana

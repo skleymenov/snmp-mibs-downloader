@@ -4,8 +4,8 @@ set -u
 
 case "$1" in
 remove)
-  ianadir=/var/lib/mibs/iana
-  ietfdir=/var/lib/mibs/ietf
+  ianadir=/var/lib/snmp/mibs/iana
+  ietfdir=/var/lib/snmp/mibs/ietf
 
   for mib in $(download-mibs --list iana) $(download-mibs --list ianarfc); do
     rm -f $ianadir/$mib

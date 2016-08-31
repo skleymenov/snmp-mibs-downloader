@@ -1,6 +1,6 @@
 usr/bin
 etc/snmp-mibs-downloader
-usr/share/mibs
+usr/share/snmp/mibs
 usr/share/snmp/mibs-downloader/mibrfcs
 usr/share/snmp/mibs-downloader/mibiana
-var/lib/mibs
+var/lib/snmp/mibs
