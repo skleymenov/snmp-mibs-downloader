@@ -23,6 +23,9 @@ snmp-mibs-downloader (1.1+nmu1) UNRELEASED; urgency=medium
   * Remove generated MIBs on package removal. (Closes: #665353)
   * Install generated MIBs to /var/lib/snmp/mibs and symlinked to
     /usr/share/snmp/mibs. (Closes: #818353)
+  * Update Cisco MIBs config and list. (Closes: #631433, #787073)
+    Based on patches by Jean Robertson <jean.robertson@mcgill.ca> and
+    grin <grin@grin.hu>.
 
  -- Guillem Jover <gjover@sipwise.com>  Thu, 14 Jul 2016 16:48:24 +0200
 
