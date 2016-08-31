@@ -3,12 +3,20 @@
 %:
 	dh $@
 
-.PHONY: update_rfcs
+.PHONY: update-mibs update-ietf-mibs update-iana-mibs
 
-update_rfcs:
+update-mibs: update-ietf-mibs update-iana-mibs
+
+update-ietf-mibs:
 	rm -f mibrfcs/*
-	cat rfclist ianarfclist | while read rfc mib; do \
-	if [ "$$rfc" != "#" ]; then \
-	wget -O mibrfcs/rfc$$rfc.txt http://www.rfc-editor.org/rfc/rfc$$rfc.txt; \
-	fi; \
+	grep -h -v '^#' rfclist ianarfclist | while read rfc mib; do \
+	  wget -O mibrfcs/rfc$$rfc.txt \
+	       http://www.rfc-editor.org/rfc/rfc$$rfc.txt; \
+	done;
+
+update-iana-mibs:
+	rm -f mibiana/*
+	grep -h -v '^#' ianalist | while read mibname mib; do \
+	  wget -O mibiana/$$mibname \
+	       http://www.iana.org/assignments/$$mibname/$$mibname; \
 	done;

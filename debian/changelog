@@ -8,6 +8,7 @@ snmp-mibs-downloader (1.1+nmu1) UNRELEASED; urgency=medium
     the one inherited from the source stanza.
   * Update Standards-Version to 3.9.8.
   * Use .PHONY instead of .phony in debian/rules.
+  * Automate maintainer update machinery for IANA and IETF MIB sources.
 
  -- Guillem Jover <gjover@sipwise.com>  Thu, 14 Jul 2016 16:48:24 +0200
 
