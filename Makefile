@@ -17,5 +17,7 @@ install:
 	$(INSTALL) -m 644 $(CONFFILES) $(DESTDIR)/etc/snmp-mibs-downloader
 	cp mibrfcs/*                   $(DESTDIR)/usr/share/doc/mibrfcs
 	cp mibiana/*                   $(DESTDIR)/usr/share/doc/mibiana
+	gzip -n9                       $(DESTDIR)/usr/share/doc/mibrfcs/*
+	gzip -n9                       $(DESTDIR)/usr/share/doc/mibiana/*
 	ln -s /var/lib/mibs/ietf     $(DESTDIR)/usr/share/mibs/ietf
 	ln -s /var/lib/mibs/iana     $(DESTDIR)/usr/share/mibs/iana
