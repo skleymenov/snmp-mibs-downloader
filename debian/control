@@ -17,7 +17,7 @@ Depends:
  patch,
 Suggests:
  unzip,
-Description: Install and manage Management Information Base (MIB) files
+Description: install and manage Management Information Base (MIB) files
  This package ships the IETF RFCs containing MIB files and a script which
  extracts them to be used by Simple Network Management libraries. The script
  can be used to update some MIBs to the latest version or to download extra
