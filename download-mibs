@@ -29,15 +29,17 @@ download_mibs()
         cp $DIR/$ARCHIVE $ARCHTMP/$ARCHIVE
       fi
 
-      if [ "$ARCHTYPE" == "tar" ]; then
+      case "$ARCHTYPE" in
+      tar)
         tar -C $ARCHTMP -xf $ARCHTMP/$ARCHIVE
-      fi
-      if [ "$ARCHTYPE" == "tgz" ]; then
+        ;;
+      tgz)
         tar -C $ARCHTMP -xzf $ARCHTMP/$ARCHIVE
-      fi
-      if [ "$ARCHTYPE" == "zip" ]; then
+        ;;
+      zip)
         unzip -d $ARCHTMP $ARCHTMP/$ARCHIVE
-      fi
+        ;;
+      esac
     fi
   fi
 
