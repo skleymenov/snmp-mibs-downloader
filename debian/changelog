@@ -5,6 +5,7 @@ snmp-mibs-downloader (1.2) UNRELEASED; urgency=medium
   * Prefix all debhelper filenames with the package name.
   * Line-wrap and sort debian/control fields.
   * Do not capitalize package synopsis.
+  * Fix package name reference in comment header in conffile.
 
  -- Guillem Jover <gjover@sipwise.com>  Wed, 16 May 2018 00:04:31 +0200
 
