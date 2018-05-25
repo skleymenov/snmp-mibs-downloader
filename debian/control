@@ -4,9 +4,9 @@ Priority: optional
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Standards-Version: 3.9.8
 Build-Depends: debhelper (>= 9)
-Homepage: https://alioth.debian.org/projects/pkg-net-snmp
-Vcs-Git: https://anonscm.debian.org/git/collab-maint/snmp-mibs-downloader.git
-Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/snmp-mibs-downloader.git
+Homepage: https://salsa.debian.org/debian/snmp-mibs-downloader
+Vcs-Browser: https://salsa.debian.org/debian/snmp-mibs-downloader
+Vcs-Git: https://salsa.debian.org/debian/snmp-mibs-downloader.git
 
 Package: snmp-mibs-downloader
 Architecture: all
