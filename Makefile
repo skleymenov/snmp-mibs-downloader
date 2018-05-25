@@ -2,10 +2,14 @@
 #
 
 CONFFILES= snmp-mibs-downloader.conf \
+           cisco.conf ciscolist \
            iana.conf ianalist \
+           ianarfc.conf ianarfclist \
+           junos.conf junoslist \
            rfc.conf rfclist rfcmibs.diff \
+           screenos.conf screenoslist \
            simpleweb.conf simplelist \
-           ianarfc.conf ianarfclist
+           $(nil)
 
 BINFILES=  download-mibs
 INSTALL=   /usr/bin/install
