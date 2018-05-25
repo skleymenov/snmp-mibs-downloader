@@ -1,5 +1,6 @@
 /*.substvars
 /*.log
+/.debhelper/
 /debhelper-build-stamp
 /files
 /snmp-mibs-downloader/
