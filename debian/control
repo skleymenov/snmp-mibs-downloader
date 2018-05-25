@@ -1,7 +1,7 @@
 Source: snmp-mibs-downloader
 Section: non-free/net
 Priority: optional
-Maintainer: Jochen Friedrich <jochen@scram.de>
+Maintainer: Debian QA Group <packages@qa.debian.org>
 Standards-Version: 3.9.8
 Build-Depends: debhelper (>= 9)
 Homepage: https://alioth.debian.org/projects/pkg-net-snmp
