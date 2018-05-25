@@ -10,9 +10,9 @@ CONFDIR=/etc/snmp-mibs-downloader
 
 download_mibs()
 {
-  TMP=`mktemp -d`
+  TMP="$(mktemp -d)"
   if [ ! -z "$ARCHIVE" ]; then
-    ARCHTMP=`mktemp -d`
+    ARCHTMP="$(mktemp -d)"
     if [ "$ARCHTYPE" == "dirgz" ]; then
       if [ ! -z "$HOST" ]; then
         echo "Downloading a whole directory with compressed content"
