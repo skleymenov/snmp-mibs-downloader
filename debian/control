@@ -10,8 +10,13 @@ Vcs-Git: https://salsa.debian.org/debian/snmp-mibs-downloader.git
 
 Package: snmp-mibs-downloader
 Architecture: all
-Depends: ${misc:Depends}, wget, smistrip, patch
-Suggests: unzip
+Depends:
+ ${misc:Depends},
+ wget,
+ smistrip,
+ patch,
+Suggests:
+ unzip,
 Description: Install and manage Management Information Base (MIB) files
  This package ships the IETF RFCs containing MIB files and a script which
  extracts them to be used by Simple Network Management libraries. The script
