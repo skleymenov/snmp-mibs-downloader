@@ -2,6 +2,7 @@ snmp-mibs-downloader (1.2) UNRELEASED; urgency=medium
 
   * Orphan package. (See #878723)
   * Move project from Alioth to Salsa.
+  * Prefix all debhelper filenames with the package name.
 
  -- Guillem Jover <gjover@sipwise.com>  Wed, 16 May 2018 00:04:31 +0200
 
