@@ -40,7 +40,7 @@ configure)
   fi
 
   if [ ! -d $ianadir -o ! -d $ietfdir ]; then
-    if ! /usr/bin/download-mibs; then
+    if ! download-mibs; then
       echo "Downloading the MIBs failed."
       echo ""
       echo "Please check your Internet connection and run download-mibs again."
