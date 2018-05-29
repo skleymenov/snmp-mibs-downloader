@@ -19,25 +19,25 @@ download_mibs()
         echo "is not supported."
         exit 1
       else
-        cp $DIR/$ARCHIVE/* $ARCHTMP/
-        gzip -d $ARCHTMP/* || /bin/true
+        cp "$DIR/$ARCHIVE"/* "$ARCHTMP/"
+        gzip -d "$ARCHTMP"/* || /bin/true
       fi
     else
       if [ ! -z "$HOST" ]; then
-        wget -O $ARCHTMP/$ARCHIVE -q -nv $HOST/$DIR/$ARCHIVE
+        wget -O "$ARCHTMP/$ARCHIVE" -q -nv "$HOST/$DIR/$ARCHIVE"
       else
-        cp $DIR/$ARCHIVE $ARCHTMP/$ARCHIVE
+        cp "$DIR/$ARCHIVE" "$ARCHTMP/$ARCHIVE"
       fi
 
       case "$ARCHTYPE" in
       tar)
-        tar -C $ARCHTMP -xf $ARCHTMP/$ARCHIVE
+        tar -C "$ARCHTMP" -xf "$ARCHTMP/$ARCHIVE"
         ;;
       tgz)
-        tar -C $ARCHTMP -xzf $ARCHTMP/$ARCHIVE
+        tar -C "$ARCHTMP" -xzf "$ARCHTMP/$ARCHIVE"
         ;;
       zip)
-        unzip -d $ARCHTMP $ARCHTMP/$ARCHIVE
+        unzip -d "$ARCHTMP" "$ARCHTMP/$ARCHIVE"
         ;;
       esac
     fi
@@ -46,10 +46,10 @@ download_mibs()
   while read -r file mibs; do
     if [ "$file" != "#" ]; then
       if [ ! -z "$PREFIX" ]; then
-        file=$PREFIX$file
+        file="$PREFIX$file"
       fi
       if [ ! -z "$SUFFIX" ]; then
-        file=$file$SUFFIX
+        file="$file$SUFFIX"
       fi
       if [ -z "$ARCHIVE" ]; then
         archive_fetcher=(wget -O - -q -nv "$HOST/$DIR/$file")
@@ -63,18 +63,18 @@ download_mibs()
   done <"$CONFDIR/$CONF"
 
   if [ ! -z "$DIFF" ]; then
-    patch -d $TMP <$CONFDIR/$DIFF
+    patch -d "$TMP" <"$CONFDIR/$DIFF"
   fi
 
-  if [ ! -d $BASEDIR/$DEST ]; then
-    mkdir -p $BASEDIR/$DEST
+  if [ ! -d "$BASEDIR/$DEST" ]; then
+    mkdir -p "$BASEDIR/$DEST"
   fi
-  cp $TMP/* $BASEDIR/$DEST
+  cp "$TMP"/* "$BASEDIR/$DEST"
 
-  rm -f $BASEDIR/$DEST/.index
-  rm -fr $TMP
+  rm -f "$BASEDIR/$DEST/.index"
+  rm -fr "$TMP"
   if [ ! -z "$ARCHTMP" ]; then
-    rm -rf $ARCHTMP
+    rm -rf "$ARCHTMP"
   fi
 }
 
@@ -85,19 +85,19 @@ list_mibs()
       continue
     fi
 
-    echo $mibs | tr ':' '\n'
+    echo "$mibs" | tr ':' '\n'
   done <"$CONFDIR/$CONF"
 }
 
-MODE=get
+MODE='get'
 
 while [ $# -gt 0 ]; do
   case $1 in
   --get)
-    MODE=get
+    MODE='get'
     ;;
   --list)
-    MODE=list
+    MODE='list'
     ;;
   *)
     break
@@ -118,7 +118,7 @@ fi
 
 sources=$1
 if [ -z "$sources" ]; then
-  sources=$AUTOLOAD
+  sources="$AUTOLOAD"
 fi
 
 for i in $sources; do
@@ -135,7 +135,7 @@ for i in $sources; do
   ARCHTYPE=
   ARCHDIR=
 
-  . $CONFDIR/$i.conf
+  . "$CONFDIR/$i.conf"
 
   if [ $MODE = list ]; then
     list_mibs
