@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Debian QA Group <packages@qa.debian.org>
 Standards-Version: 4.1.4
 Build-Depends: debhelper (>= 11)
+Rules-Requires-Root: no
 Homepage: https://salsa.debian.org/debian/snmp-mibs-downloader
 Vcs-Browser: https://salsa.debian.org/debian/snmp-mibs-downloader
 Vcs-Git: https://salsa.debian.org/debian/snmp-mibs-downloader.git
